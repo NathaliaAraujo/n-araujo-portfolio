@@ -1,12 +1,42 @@
 @import "tailwindcss";
 
-:root {
+@theme {
+  --color-bg: #ffffff;
+  --color-fg: #0a0a0a;
+  --color-muted: #888888;
+  --color-border: #e5e4e7;
+
+  --font-sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-bg: #0a0a0a;
+    --color-fg: #f3f4f6;
+    --color-muted: #9ca3af;
+    --color-border: #2e303a;
+  }
+}
+
+html {
   color-scheme: light dark;
 }
 
 body {
   margin: 0;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
   min-height: 100svh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Visually hide content but keep it available to screen readers */

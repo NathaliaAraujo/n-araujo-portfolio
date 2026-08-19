@@ -1,16 +1,17 @@
 import { useEffect } from 'react'
 
-const SITE_NAME = 'Nomad Design'
-const SITE_URL = 'https://nomaddesign.co'
+const SITE_NAME = 'Nathalia'
+// TODO: substituir pelo domínio real assim que o projeto for publicado.
+const SITE_URL = 'https://nathalia.design'
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`
 
 interface SeoProps {
-  /** Page-specific title. Rendered as "{title} | Nomad Design". */
+  /** Título da página. Renderizado como "{title} — Nathalia". */
   title: string
-  description: string
-  /** Path relative to the site root, e.g. "/sobre". Defaults to "/". */
+  description?: string
+  /** Caminho relativo à raiz do site, ex: "/about". Padrão: rota atual. */
   path?: string
-  /** Absolute URL to an Open Graph image. Falls back to the site default. */
+  /** URL absoluta para a imagem de Open Graph. Usa a imagem padrão do site se omitida. */
   image?: string
   noIndex?: boolean
 }
@@ -45,27 +46,29 @@ function setLinkTag(rel: string, href: string) {
  * prerendering (e.g. vite-plugin-ssr, Vercel's static generation) or an
  * edge function that serves per-route meta tags.
  */
-export function Seo({ title, description, path = '/', image, noIndex }: SeoProps) {
+export function Seo({ title, description, path, image, noIndex }: SeoProps) {
   useEffect(() => {
-    const fullTitle = `${title} | ${SITE_NAME}`
-    const url = `${SITE_URL}${path}`
+    const fullTitle = `${title} — ${SITE_NAME}`
+    const url = `${SITE_URL}${path ?? window.location.pathname}`
     const ogImage = image ?? DEFAULT_OG_IMAGE
 
     document.title = fullTitle
 
-    setMetaTag('name', 'description', description)
+    if (description) {
+      setMetaTag('name', 'description', description)
+      setMetaTag('property', 'og:description', description)
+      setMetaTag('name', 'twitter:description', description)
+    }
     setMetaTag('name', 'robots', noIndex ? 'noindex, nofollow' : 'index, follow')
 
     setMetaTag('property', 'og:type', 'website')
     setMetaTag('property', 'og:site_name', SITE_NAME)
     setMetaTag('property', 'og:title', fullTitle)
-    setMetaTag('property', 'og:description', description)
     setMetaTag('property', 'og:url', url)
     setMetaTag('property', 'og:image', ogImage)
 
     setMetaTag('name', 'twitter:card', 'summary_large_image')
     setMetaTag('name', 'twitter:title', fullTitle)
-    setMetaTag('name', 'twitter:description', description)
     setMetaTag('name', 'twitter:image', ogImage)
 
     setLinkTag('canonical', url)

@@ -1,0 +1,94 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "NATHALIA" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e6]:
+        - link "Selected Works" [ref=e7] [cursor=pointer]:
+          - /url: /selected-works
+        - link "About" [ref=e8] [cursor=pointer]:
+          - /url: /about
+        - link "Playground" [ref=e9] [cursor=pointer]:
+          - /url: /playground
+      - generic [ref=e10]:
+        - link "My Resume" [ref=e11] [cursor=pointer]:
+          - /url: "#"
+        - link "Work With Me" [ref=e12] [cursor=pointer]:
+          - /url: "#"
+  - main [ref=e13]:
+    - generic [ref=e14]:
+      - heading [level=1] [ref=e15]:
+        - text: Selected
+        - emphasis [ref=e16]: w
+        - text: orks
+      - paragraph [ref=e17]: Projetos cruzando design de produto e visual, além de uma seção adicional, playground, com explorações de outras paixões de design.
+    - generic [ref=e18]:
+      - link "2024 Projeto A / Mobile, Fintech Mobile || Web, Fintech 01" [ref=e19] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - paragraph [ref=e23]: "2024"
+            - paragraph [ref=e24]:
+              - strong [ref=e25]: Projeto A
+              - generic [ref=e26]: / Mobile, Fintech
+            - paragraph [ref=e27]: Mobile || Web, Fintech
+          - generic [ref=e28]: "01"
+      - link "Cover image 2023 Projeto B / Web, Ecommerce Web, Ecommerce 02" [ref=e29] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e30]: Cover image
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - paragraph [ref=e34]: "2023"
+            - paragraph [ref=e35]:
+              - strong [ref=e36]: Projeto B
+              - generic [ref=e37]: / Web, Ecommerce
+            - paragraph [ref=e38]: Web, Ecommerce
+          - generic [ref=e39]: "02"
+      - link "Cover image 2022 Projeto C / Mobile, Saúde Mobile, Saúde 03" [ref=e40] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e41]: Cover image
+        - generic [ref=e43]:
+          - generic [ref=e44]:
+            - paragraph [ref=e45]: "2022"
+            - paragraph [ref=e46]:
+              - strong [ref=e47]: Projeto C
+              - generic [ref=e48]: / Mobile, Saúde
+            - paragraph [ref=e49]: Mobile, Saúde
+          - generic [ref=e50]: "03"
+    - link "PLAYGROUND / EXPERIMENTOS E ESTUDOS →" [ref=e52] [cursor=pointer]:
+      - /url: /playground
+  - contentinfo [ref=e53]:
+    - generic [ref=e54]:
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - paragraph [ref=e57]: /REACH ME
+          - link "contato@example.com" [ref=e58] [cursor=pointer]:
+            - /url: mailto:contato@example.com
+        - generic [ref=e59]:
+          - paragraph [ref=e60]: /NAVIGATE TO
+          - list [ref=e61]:
+            - listitem [ref=e62]:
+              - link "Home" [ref=e63] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e64]:
+              - link "Selected Works" [ref=e65] [cursor=pointer]:
+                - /url: /selected-works
+            - listitem [ref=e66]:
+              - link "About" [ref=e67] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e68]:
+              - link "Playground" [ref=e69] [cursor=pointer]:
+                - /url: /playground
+        - generic [ref=e70]:
+          - paragraph [ref=e71]: /STALK ME
+          - list [ref=e72]:
+            - listitem [ref=e73]:
+              - link "LinkedIn" [ref=e74] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e75]:
+              - link "Instagram" [ref=e76] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e77]:
+              - link "Behance" [ref=e78] [cursor=pointer]:
+                - /url: "#"
+      - paragraph [ref=e79]: Designed & built with 💛 by Nathalia

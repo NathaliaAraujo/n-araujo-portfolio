@@ -5,7 +5,7 @@ import coverPlaceholder01 from '../assets/cover-placeholder-01.svg'
 const projects = [
   {
     year: '2024',
-    name: 'Projeto A',
+    name: 'Projeto 1',
     category: 'Mobile, Fintech',
     tags: 'Mobile || Web, Fintech',
     index: '01',
@@ -14,7 +14,7 @@ const projects = [
   },
   {
     year: '2023',
-    name: 'Projeto B',
+    name: 'Projeto 2',
     category: 'Web, Ecommerce',
     tags: 'Web, Ecommerce',
     index: '02',
@@ -23,7 +23,7 @@ const projects = [
   },
   {
     year: '2022',
-    name: 'Projeto C',
+    name: 'Projeto 3',
     category: 'Mobile, Saúde',
     tags: 'Mobile, Saúde',
     index: '03',
@@ -35,11 +35,11 @@ const projects = [
 export function SelectedWorks() {
   return (
     <>
-      <Seo title="Selected Works" description="Projetos selecionados de design de produto e interação." />
+      <Seo title="Selected Projects" description="Projetos selecionados de design de produto e interação." />
 
       <section className="mx-auto max-w-6xl px-6 pb-10 pt-20">
         <h1 className="text-5xl font-medium tracking-tight sm:text-6xl">
-          Selected <em className="font-normal not-italic text-muted">w</em>orks
+          Selected <em className="font-normal not-italic text-muted">p</em>rojects
         </h1>
         <p className="mt-6 max-w-xl text-sm text-muted">
           Projetos cruzando design de produto e visual, além de uma seção

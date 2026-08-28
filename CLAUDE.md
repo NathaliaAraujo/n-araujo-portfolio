@@ -59,3 +59,6 @@ Note: actual email sending is not yet implemented in the planned `api/contact.ts
 - Configure environment variables in the Vercel project settings.
 - Push to `main` → production deploy. Push to other branches/PRs → automatic preview deployment.
 - `vercel.json` includes the rewrite needed for React Router to work on direct routes (e.g. visiting `/about` directly), without interfering with `/api` routes.
+
+## Don't
+- Don't commit directly to `main` branch.

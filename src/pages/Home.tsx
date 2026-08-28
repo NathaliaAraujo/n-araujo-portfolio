@@ -1,42 +1,32 @@
 import { Seo } from '../components/Seo'
+import iconArrowRight from '../assets/icon-arrow-right.svg'
 
 export function Home() {
   return (
     <>
       <Seo title="Home" description="Portfólio — trabalho em design de produto e interação." />
 
-      <section className="mx-auto max-w-6xl px-6 pb-16 pt-20">
-        <p className="text-xs tracking-wide text-muted">2023—AGORA</p>
-        {/* TODO: palavras rotativas (Designer, ..., ...) + imagem pareada — animação GSAP */}
-        <h1 className="mt-6 text-5xl font-medium tracking-tight sm:text-6xl">
-          Designer,
-        </h1>
-        <button
-          type="button"
-          className="mt-6 text-sm tracking-wide text-muted transition-colors hover:text-fg"
-        >
-          PLAY PROJECT REELS
-        </button>
-      </section>
-
-      {/* TODO: grid de projetos em destaque (2 case studies + teaser do playground) */}
-      <section className="mx-auto grid max-w-6xl grid-cols-1 gap-4 px-6 pb-16 sm:grid-cols-3">
-        {['Projeto 1', 'Playground', 'Projeto 2'].map((label) => (
-          <div
-            key={label}
-            className="flex aspect-[4/5] items-end border border-border p-4 text-sm text-muted"
-          >
-            {label}
+      <div className="bg-[#0a0a0a] font-body text-white">
+        <div className="flex min-h-[calc(100svh-6.25rem)] flex-col items-center justify-center gap-16 px-6 py-20 text-center sm:px-20">
+          <div className="flex w-full flex-col items-center gap-6">
+            <h1 className="font-display text-5xl font-bold leading-none sm:text-7xl lg:text-8xl">
+              Hello, I am Nathalia Araujo.
+            </h1>
+            <p className="max-w-[644px] text-xl leading-[1.6] opacity-70">
+              Product Designer and Design Lead bridging design, functionality, and management to
+              solve complex problems and build solutions.
+            </p>
           </div>
-        ))}
-      </section>
 
-      {/* TODO: linha de redes sociais (Vimeo, Are.na, LinkedIn, Spotify...) */}
-      <section className="mx-auto flex max-w-6xl gap-6 px-6 pb-20 text-sm text-muted">
-        <a href="#">LinkedIn</a>
-        <a href="#">Instagram</a>
-        <a href="#">Behance</a>
-      </section>
+          <button
+            type="button"
+            className="flex items-center gap-3 rounded border border-white px-8 py-4 text-sm font-semibold uppercase"
+          >
+            View Portfolio
+            <img src={iconArrowRight} alt="" className="size-4" />
+          </button>
+        </div>
+      </div>
     </>
   )
 }

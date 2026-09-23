@@ -1,0 +1,171 @@
+/* =============================================================
+   Portfolio-Nathalia — Tailwind v4 @theme tokens
+   Drop-in replacement/extension for src/index.css's existing @theme block.
+   Keeps your current auto dark mode (prefers-color-scheme) and ALSO
+   supports a manual [data-theme="dark"] override, in case you add a
+   theme toggle later — the override just wins over the media query.
+   ============================================================= */
+
+@theme {
+  /* ---------- Primitives: Primary (teal) ---------- */
+  --color-primary-50:  #f5fcfb;
+  --color-primary-100: #e6f8f6;
+  --color-primary-200: #c4eeeb;
+  --color-primary-300: #9fe4dd;
+  --color-primary-400: #69d5ca;
+  --color-primary-500: #2ec4b6;
+  --color-primary-600: #28ada0;
+  --color-primary-700: #229388;
+  --color-primary-800: #1c796f;
+  --color-primary-900: #155f57;
+  --color-primary-950: #104841;
+
+  /* ---------- Primitives: Secondary (deep ink green) ---------- */
+  --color-secondary-50:  #f3f5f5;
+  --color-secondary-100: #e2e8e7;
+  --color-secondary-200: #bbc9c6;
+  --color-secondary-300: #8fa6a1;
+  --color-secondary-400: #4f736c;
+  --color-secondary-500: #0b3d33;
+  --color-secondary-600: #0a362d;
+  --color-secondary-700: #082e27;
+  --color-secondary-800: #072620;
+  --color-secondary-900: #051f1a;
+  --color-secondary-950: #041814;
+
+  /* ---------- Primitives: Accent (amber/orange) ---------- */
+  --color-accent-50:  #fffcf6;
+  --color-accent-100: #fff7e9;
+  --color-accent-200: #feedcc;
+  --color-accent-300: #fee2ab;
+  --color-accent-400: #fdd17c;
+  --color-accent-500: #fcbf49;
+  --color-accent-600: #eaaf40;
+  --color-accent-700: #d59c36;
+  --color-accent-800: #c08a2c;
+  --color-accent-900: #ab7722;
+  --color-accent-950: #996719;
+
+  /* ---------- Primitives: Sky (tertiary / light blue) ---------- */
+  --color-sky-50:  #fafeff;
+  --color-sky-100: #f3fcff;
+  --color-sky-200: #e3f8ff;
+  --color-sky-300: #d1f4ff;
+  --color-sky-400: #b7eeff;
+  --color-sky-500: #9be7ff;
+  --color-sky-600: #87d1ea;
+  --color-sky-700: #71b8d1;
+  --color-sky-800: #5b9fb9;
+  --color-sky-900: #4486a0;
+  --color-sky-950: #31708b;
+
+  /* ---------- Primitives: Neutral (warm, cream-anchored) ---------- */
+  --color-neutral-50:  #fff7e6;
+  --color-neutral-100: #f6f0e0;
+  --color-neutral-200: #e3e2d1;
+  --color-neutral-300: #cdd1c1;
+  --color-neutral-400: #adb9aa;
+  --color-neutral-500: #859a8c;
+  --color-neutral-600: #74897d;
+  --color-neutral-700: #60766b;
+  --color-neutral-800: #4d6259;
+  --color-neutral-900: #394f47;
+  --color-neutral-950: #283e37;
+
+  /* ---------- Semantic (light values — this repo's default) ---------- */
+  --color-bg:      var(--color-neutral-50);   /* was #ffffff */
+  --color-fg:      var(--color-neutral-900);  /* was #0a0a0a */
+  --color-muted:   var(--color-neutral-700);  /* was #888888 — bumped for AA (4.58:1) */
+  --color-border:  var(--color-neutral-300);  /* was #e5e4e7 */
+
+  --color-surface-raised:    var(--color-neutral-100);
+  --color-surface-sunken:    var(--color-neutral-200);
+  --color-surface-inverse:   var(--color-neutral-950);
+  --color-surface-brand:     var(--color-primary-500);
+  --color-surface-secondary: var(--color-secondary-500);
+  --color-surface-accent:    var(--color-accent-500);
+
+  --color-text-on-primary:   var(--color-neutral-950);
+  --color-text-on-secondary: var(--color-neutral-50);
+  --color-text-on-accent:    var(--color-neutral-900);
+  --color-text-link:         var(--color-sky-950);
+
+  --color-border-interactive: var(--color-neutral-600);
+  --color-focus-ring:         var(--color-accent-950);
+
+  --font-sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, Consolas, monospace;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Auto dark mode — matches your existing prefers-color-scheme pattern */
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-bg:      var(--color-neutral-950);
+    --color-fg:      var(--color-neutral-50);
+    --color-muted:   var(--color-neutral-300);
+    --color-border:  var(--color-neutral-700);
+
+    --color-surface-raised:    var(--color-neutral-900);
+    --color-surface-sunken:    var(--color-neutral-800);
+    --color-surface-inverse:   var(--color-neutral-50);
+    --color-surface-brand:     var(--color-primary-400);
+    --color-surface-secondary: var(--color-secondary-300);
+    --color-surface-accent:    var(--color-accent-400);
+
+    --color-text-on-primary:   var(--color-neutral-950);
+    --color-text-on-secondary: var(--color-neutral-950);
+    --color-text-on-accent:    var(--color-neutral-950);
+    --color-text-link:         var(--color-sky-300);
+
+    --color-border-interactive: var(--color-neutral-500);
+    --color-focus-ring:         var(--color-accent-300);
+  }
+}
+
+/* Optional manual override — add this attribute to <html> from a theme
+   toggle and it takes precedence over the OS-level media query above. */
+[data-theme="dark"] {
+  --color-bg:      var(--color-neutral-950);
+  --color-fg:      var(--color-neutral-50);
+  --color-muted:   var(--color-neutral-300);
+  --color-border:  var(--color-neutral-700);
+
+  --color-surface-raised:    var(--color-neutral-900);
+  --color-surface-sunken:    var(--color-neutral-800);
+  --color-surface-inverse:   var(--color-neutral-50);
+  --color-surface-brand:     var(--color-primary-400);
+  --color-surface-secondary: var(--color-secondary-300);
+  --color-surface-accent:    var(--color-accent-400);
+
+  --color-text-on-primary:   var(--color-neutral-950);
+  --color-text-on-secondary: var(--color-neutral-950);
+  --color-text-on-accent:    var(--color-neutral-950);
+  --color-text-link:         var(--color-sky-300);
+
+  --color-border-interactive: var(--color-neutral-500);
+  --color-focus-ring:         var(--color-accent-300);
+}
+
+[data-theme="light"] {
+  --color-bg:      var(--color-neutral-50);
+  --color-fg:      var(--color-neutral-900);
+  --color-muted:   var(--color-neutral-700);
+  --color-border:  var(--color-neutral-300);
+
+  --color-surface-raised:    var(--color-neutral-100);
+  --color-surface-sunken:    var(--color-neutral-200);
+  --color-surface-inverse:   var(--color-neutral-950);
+  --color-surface-brand:     var(--color-primary-500);
+  --color-surface-secondary: var(--color-secondary-500);
+  --color-surface-accent:    var(--color-accent-500);
+
+  --color-text-on-primary:   var(--color-neutral-950);
+  --color-text-on-secondary: var(--color-neutral-50);
+  --color-text-on-accent:    var(--color-neutral-900);
+  --color-text-link:         var(--color-sky-950);
+
+  --color-border-interactive: var(--color-neutral-600);
+  --color-focus-ring:         var(--color-accent-950);
+}

@@ -1,0 +1,138 @@
+/* =============================================================
+   Portfolio-Nathalia — Design Tokens (portable CSS custom properties)
+   Generated from reference palette: #0b3d33 / #2ec4b6 / #9be7ff / #fcbf49 / #fff7e6
+   Usage: drop into any project. Toggle dark mode by setting
+   [data-theme="dark"] on <html> (or swap for @media (prefers-color-scheme) —
+   see tailwind-theme.css for the version wired to this repo's actual stack).
+   ============================================================= */
+
+:root {
+  color-scheme: light;
+
+  /* ---------- PRIMITIVES: Primary (teal) ---------- */
+  --color-primary-50:  #f5fcfb;
+  --color-primary-100: #e6f8f6;
+  --color-primary-200: #c4eeeb;
+  --color-primary-300: #9fe4dd;
+  --color-primary-400: #69d5ca;
+  --color-primary-500: #2ec4b6; /* reference */
+  --color-primary-600: #28ada0;
+  --color-primary-700: #229388;
+  --color-primary-800: #1c796f;
+  --color-primary-900: #155f57;
+  --color-primary-950: #104841;
+
+  /* ---------- PRIMITIVES: Secondary (deep ink green) ---------- */
+  --color-secondary-50:  #f3f5f5;
+  --color-secondary-100: #e2e8e7;
+  --color-secondary-200: #bbc9c6;
+  --color-secondary-300: #8fa6a1;
+  --color-secondary-400: #4f736c;
+  --color-secondary-500: #0b3d33; /* reference */
+  --color-secondary-600: #0a362d;
+  --color-secondary-700: #082e27;
+  --color-secondary-800: #072620;
+  --color-secondary-900: #051f1a;
+  --color-secondary-950: #041814;
+
+  /* ---------- PRIMITIVES: Accent (amber/orange) ---------- */
+  --color-accent-50:  #fffcf6;
+  --color-accent-100: #fff7e9;
+  --color-accent-200: #feedcc;
+  --color-accent-300: #fee2ab;
+  --color-accent-400: #fdd17c;
+  --color-accent-500: #fcbf49; /* reference */
+  --color-accent-600: #eaaf40;
+  --color-accent-700: #d59c36;
+  --color-accent-800: #c08a2c;
+  --color-accent-900: #ab7722;
+  --color-accent-950: #996719;
+
+  /* ---------- PRIMITIVES: Accent-Sky (tertiary / light blue) ---------- */
+  --color-sky-50:  #fafeff;
+  --color-sky-100: #f3fcff;
+  --color-sky-200: #e3f8ff;
+  --color-sky-300: #d1f4ff;
+  --color-sky-400: #b7eeff;
+  --color-sky-500: #9be7ff; /* reference */
+  --color-sky-600: #87d1ea;
+  --color-sky-700: #71b8d1;
+  --color-sky-800: #5b9fb9;
+  --color-sky-900: #4486a0;
+  --color-sky-950: #31708b;
+
+  /* ---------- PRIMITIVES: Neutral (warm, cream-anchored) ---------- */
+  --color-neutral-50:  #fff7e6; /* reference */
+  --color-neutral-100: #f6f0e0;
+  --color-neutral-200: #e3e2d1;
+  --color-neutral-300: #cdd1c1;
+  --color-neutral-400: #adb9aa;
+  --color-neutral-500: #859a8c;
+  --color-neutral-600: #74897d;
+  --color-neutral-700: #60766b;
+  --color-neutral-800: #4d6259;
+  --color-neutral-900: #394f47;
+  --color-neutral-950: #283e37;
+
+  /* ---------- SEMANTIC: Surface ---------- */
+  --surface-base:            var(--color-neutral-50);
+  --surface-raised:          var(--color-neutral-100);
+  --surface-sunken:          var(--color-neutral-200);
+  --surface-inverse:         var(--color-neutral-950);
+  --surface-brand:           var(--color-primary-500);
+  --surface-brand-hover:     var(--color-primary-600);
+  --surface-brand-active:    var(--color-primary-700);
+  --surface-brand-secondary: var(--color-secondary-500);
+  --surface-accent:          var(--color-accent-500);
+  --surface-accent-hover:    var(--color-accent-600);
+
+  /* ---------- SEMANTIC: Text ---------- */
+  --text-primary:      var(--color-neutral-900); /* 8.27:1 on surface-base */
+  --text-secondary:    var(--color-neutral-700); /* 4.58:1 on surface-base */
+  --text-muted:        var(--color-neutral-600); /* 3.51:1 — large text/UI labels only, not AA body text */
+  --text-inverse:      var(--color-neutral-50);
+  --text-on-primary:   var(--color-neutral-950); /* 5.28:1 on surface-brand */
+  --text-on-secondary: var(--color-neutral-50);  /* 11.39:1 on surface-brand-secondary */
+  --text-on-accent:    var(--color-neutral-900); /* 5.32:1 on surface-accent */
+  --text-link:         var(--color-sky-950);     /* 5.16:1 on surface-base */
+  --text-link-hover:   var(--color-secondary-500);
+
+  /* ---------- SEMANTIC: Border ---------- */
+  --border-subtle:      var(--color-neutral-200); /* decorative dividers */
+  --border-default:     var(--color-neutral-300); /* decorative dividers */
+  --border-interactive: var(--color-neutral-600); /* 3.51:1 — inputs, focusable component boundaries */
+  --focus-ring:          var(--color-accent-950); /* 4.57:1 — meets 3:1 non-text UI requirement */
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* ---------- SEMANTIC: Surface ---------- */
+  --surface-base:            var(--color-neutral-950);
+  --surface-raised:          var(--color-neutral-900);
+  --surface-sunken:          var(--color-neutral-800);
+  --surface-inverse:         var(--color-neutral-50);
+  --surface-brand:           var(--color-primary-400);  /* brightened for dark bg */
+  --surface-brand-hover:     var(--color-primary-300);
+  --surface-brand-active:    var(--color-primary-500);
+  --surface-brand-secondary: var(--color-secondary-300); /* lightened for dark bg */
+  --surface-accent:          var(--color-accent-400);
+  --surface-accent-hover:    var(--color-accent-300);
+
+  /* ---------- SEMANTIC: Text ---------- */
+  --text-primary:      var(--color-neutral-50);  /* 10.74:1 on surface-base */
+  --text-secondary:    var(--color-neutral-300); /* 7.35:1 on surface-base */
+  --text-muted:        var(--color-neutral-500); /* 3.81:1 — large text/UI labels only */
+  --text-inverse:      var(--color-neutral-950);
+  --text-on-primary:   var(--color-neutral-950); /* 6.53:1 on surface-brand */
+  --text-on-secondary: var(--color-neutral-950); /* 4.44:1 on surface-brand-secondary */
+  --text-on-accent:    var(--color-neutral-950); /* 7.95:1 on surface-accent */
+  --text-link:         var(--color-sky-300);     /* 9.86:1 on surface-base */
+  --text-link-hover:   var(--color-sky-100);
+
+  /* ---------- SEMANTIC: Border ---------- */
+  --border-subtle:      var(--color-neutral-800);
+  --border-default:     var(--color-neutral-700);
+  --border-interactive: var(--color-neutral-500); /* 3.81:1 */
+  --focus-ring:          var(--color-accent-300); /* 9.09:1 */
+}

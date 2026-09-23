@@ -1,0 +1,49 @@
+- generic [ref=f1e2]:
+  - link "Pular para o conteúdo principal" [ref=f1e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f1e4]:
+    - generic [ref=f1e5]:
+      - link [ref=f1e6] [cursor=pointer]:
+        - /url: /
+        - paragraph [ref=f1e7]: Nathalia Araujo
+      - button "Abrir menu" [ref=f1e8]
+  - dialog [aria-hidden]:
+    - generic:
+      - generic:
+        - generic:
+          - button
+          - paragraph: Nathalia Araujo
+        - navigation:
+          - link:
+            - /url: /#selected-projects
+            - text: Selected Project
+          - link:
+            - /url: /#experience
+            - text: Experience
+          - link:
+            - /url: /open-lab
+            - text: In the Loop
+      - link:
+        - /url: /#footer
+        - text: Let's Connect!
+  - main [ref=f1e9]:
+    - generic [ref=f1e11]:
+      - generic [ref=f1e12]: In the loop
+      - paragraph [ref=f1e13]: An open lab, in construction — loose ideas, work in progress, design discoveries, and many things I like doing.
+      - paragraph [ref=f1e14]: By the way, my last adventure was in Maranhão, Brazil. Trekking through the dunes of Lençóis Maranhenses, MA, taught me great lessons about user-centered design, human behavior, and how design shows up in daily life. Full write-up coming soon!
+  - contentinfo [ref=f1e17]:
+    - generic [ref=f1e18]:
+      - generic [ref=f1e19]:
+        - generic [ref=f1e20]: Let's Connect
+        - heading "Interested in working together?" [level=2] [ref=f1e21]
+        - paragraph [ref=f1e22]: I'm always up for talking shop. Tell me what you're working on! Whether we collaborate or not, I find every conversation leaves both sides with fresh perspectives and a win.
+      - generic [ref=f1e23]:
+        - generic [ref=f1e24]:
+          - paragraph [ref=f1e25]: Get In Touch
+          - link "naraujo@nomaddesign.co" [ref=f1e26] [cursor=pointer]:
+            - /url: mailto:naraujo@nomaddesign.co
+        - generic [ref=f1e27]:
+          - paragraph [ref=f1e28]: Connect on LinkedIn
+          - link "@natiaraujo" [ref=f1e29] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/natiaraujo/
+      - paragraph [ref=f1e31]: © 2026 Nathalia Araujo - Product Designer • Discover, explore and craft!

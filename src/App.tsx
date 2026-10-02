@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 import { Layout } from './components/Layout'
 import { Home } from './pages/Home'
 import { SelectedWorks } from './pages/SelectedWorks'
@@ -18,6 +19,7 @@ function App() {
           <Route path="project-websuite" element={<ProjectWebsuite />} />
         </Route>
       </Routes>
+      <Analytics />
     </BrowserRouter>
   )
 }

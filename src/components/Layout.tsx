@@ -6,7 +6,7 @@ import iconMenuClose from '../assets/icon-menu-close.svg'
 const navItems = [
   { to: '/#selected-projects', label: 'Selected Project' },
   { to: '/#experience', label: 'Experience' },
-  { to: '/open-lab', label: 'In the Loop' },
+  { to: '/open-lab', label: 'Open Lab' },
 ]
 
 export function Layout() {

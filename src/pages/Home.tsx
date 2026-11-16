@@ -93,7 +93,7 @@ export function Home() {
             <div className="relative col-start-1 row-start-1 flex w-full flex-col items-start gap-[30px] lg:mt-[114px] lg:w-[55%]">
               <Badge>About Me</Badge>
               <h1 className="font-display text-[40px] font-bold leading-[1.05] tracking-[-2px] text-[#f8fafc] sm:text-[56px] lg:text-[64px]">
-                Nathalia Araujo, Design Lead
+                Nathalia Araujo, Designer UI/UX
               </h1>
               <p className="text-lg leading-[1.6] text-[#cbd5e1]">
                 I&apos;m <em className="font-medium italic text-[#ff7e5f]">a product designer</em> and{' '}
